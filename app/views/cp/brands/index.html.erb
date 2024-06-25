@@ -1,0 +1,38 @@
+<div class="page-header d-print-none">
+  <div class="container-xl">
+    <div class="row g-2 align-items-center">
+      <div class="col">
+        <h2 class="page-title" data-controller="hello" id="title">
+          Brands
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="container-xl">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table" data-controller="brands" id="brands-datatable" data-brands-target="table" data-source="<%= cp_brands_path(format: :json) %>">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Website</th>
+                <th>Categories</th>
+              </tr>
+              </thead>
+              <tbody class="table-tbody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

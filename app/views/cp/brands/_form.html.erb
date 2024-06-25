@@ -1,0 +1,17 @@
+<%= form_with(model: cp_brand) do |form| %>
+  <% if cp_brand.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cp_brand.errors.count, "error") %> prohibited this cp_brand from being saved:</h2>
+
+      <ul>
+        <% cp_brand.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
